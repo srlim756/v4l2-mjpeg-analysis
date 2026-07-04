@@ -1,0 +1,12 @@
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+*.dll
+v4l2-mjpeg-analysis
+build/
+.DS_Store
+Thumbs.db
