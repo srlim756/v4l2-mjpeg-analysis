@@ -1,4 +1,10 @@
 /*
+ * 注意：本项目摄像头（HD Webcam）每帧发送完整 JPEG 头（SOI+APP0+...），
+ *       不需要帧头补全。此代码仅对"增量帧缺头"的摄像头有效。
+ *       使用前请先用 dump_mjpg 检查帧头：xxd frame_0.jpg | head -3
+ */
+
+/*
  * V4L2 MJPG 采集 + 帧头补全 v4 —— 增加非法标记扫描
  *
  * 编译：  gcc -o capture_fix main_mjpg_fix.c
